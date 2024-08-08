@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>testing the server</title>
+</head>
+<body>
+    <h1>This Is a Calculater</h1>
+    <h5><s>it cannot do complex calculation but that's enough</s></h5>
+    <hr>
+    <a href="http://127.0.0.1:5500/suck%20it.html">if you need more calculation than this website just click here and use scientific calculater</a>
+    <ul>
+       the kind of calculation that can be used
+       <li>addition</li>
+       <li>subtraction</li>
+       <li>multiplication</li>
+       <li>division</li> 
+    </ul>
+    <form >input the calculation sentence you have <br><br>
+    <label for="the first one ">first number</label>
+    <input type="number" placeholder="input the first number " id="the first one">
+    <br>
+    <label >choose the type of calculation </label><br>
+    <input type="radio" name="types" value="+"> + <br>
+    <input type="radio" name="types" value="-"> - <br>
+    <input type="radio" name="types" value=""*> * <br>
+    <input type="radio" name="types" value="/"> / 
+    <br>
+    <label for="the second one ">second number</label>
+    <input type="number" placeholder="input the second number " id="the second one">
+    <br>
+    <button onclick="shitbro()">submit</button>
+    <script>
+        function shitbro(){
+            let a=parseFloat(document.getElementById("the first one").value)
+            let b=parseFloat(document.getElementById("the second one").value)
+            let c=document.querySelector('input[name="types"]:checked').value
+            let d=0;
+            if(c==="+"){
+              d=a+b}
+            else if(c==="-"){
+            d=a-b}
+            else if(c==="*"){
+                 d=a*b
+            }
+            else if (c==="/"){
+                d=a/b
+            }
+           alert(`the result is ${d}`)
+           
+        }
+        
+        
+
+    </script>
+    </form>
+</body>
+</html>
